@@ -1,0 +1,404 @@
+.container-my {
+  max-width: 1350px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-30px {
+  height: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-grey {
+  background: #f4f4f4;
+}
+
+.bg-white {
+  background: white;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.color-red {
+  color: #ce2500;
+}
+
+.text-center {
+  text-align: center;
+}
+.pagination{
+  list-style-type: none!important;
+  justify-content: center;
+}
+.pagination .page-link{
+  background: #5a5a5a;
+  color: #fff;
+}
+.page-item.disabled .page-link{
+  background: #5a5a5a!important;
+}
+.modal-header h1{
+  color: #ce2500;
+  font-family: "Myriad Pro Condensed";
+  font-size: 20pt;
+  font-weight: bold;
+}
+.pl-5px{
+  padding-left: 5px!important;
+}
+.pr-5px{
+  padding-right: 5px!important;
+}
+
+
+.product-slider .splide__track{
+  display: flex!important;
+}
+
+
+
+
+
+.header {
+  height: 85px;
+  
+}
+
+.header-logo {
+  background-image: url('/images/logo.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: block;
+}
+
+.header-logo-mini {
+  background-image: url('/images/logo_mini.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: block;
+}
+
+.header-title {
+  font-family: "Myriad Pro Condensed";
+  width: 200px!important;
+  color: #838383;
+}
+
+.header-phones {
+  color: #ce2500;
+  font-family: Tahoma;
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+.phone_icon {
+  background-image: url('/images/phone_icon.png');
+  background-repeat: no-repeat;
+  width: 12px;
+  margin: 6px;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 15px;
+  font-family: Tahoma;
+  font-size: 10pt;
+}
+
+.address_icon {
+  background-image: url('/images/address_icon.png');
+}
+
+.email_icon {
+  background-image: url('/images/email_icon.png');
+}
+
+.header-xs-title {
+  font-family: "Myriad Pro Condensed";
+  font-size: 16pt;
+}
+
+.dropdown-toggle {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .header-phones {
+    font-size: 10pt;
+  }
+  .header-address {
+    font-size: 8pt;
+  }
+  .icon {
+    padding-left: 0px;
+    background-image: none;
+  }
+  .phone_icon {
+    display: none;
+  }
+}
+
+
+/*header menu */
+
+.menu-top-wrapper {
+  background: #3a3a3a;
+}
+
+.menu-top-item {
+  color: #fff;
+  font-family: Tahoma;
+  font-size: 10pt;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 20px;
+  letter-spacing: .1em;
+  transition: text-shadow .1s;
+}
+
+.menu-top-item:hover {
+  text-decoration: none;
+  color: #eee;
+  text-shadow: 0px 0px 5px white;
+}
+
+.search-menu-top {
+  padding: 3px;
+}
+
+.search-menu-top input {
+  font-size: 10pt;
+  padding: 0 15px;
+  outline: none;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  height: 24px;
+}
+
+.search-icon-menu-top {
+  background-image: url('/images/search_icon.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 13px;
+  height: 13px;
+  position: relative;
+  z-index: 1;
+  right: 30px;
+}
+
+
+/*  logo firms */
+
+.logo-firm {
+  height: calc(2em + 1vw);
+  margin-top: calc(1em + 1vw);
+  margin-bottom: calc(1em + 1vw);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /*opacity: 50%;*/
+  background-size: contain;
+}
+
+.logo-firm:hover {
+  opacity: 100%;
+}
+
+/*.logo-karcher {
+  background-image: url('/images/karcher_logo.png');
+}
+
+.logo-bosch {
+  background-image: url('/images/bosch_logo.png');
+}
+
+.logo-wagner {
+  background-image: url('/images/wagner_logo.png');
+}*/
+
+.logo-firm-o100{  
+  opacity: 100%;
+}
+
+
+/* footer */
+
+.footer-banners img {
+  width: 100%;
+  margin: 20px 0;
+}
+
+footer {
+  background: #3a3a3a;
+}
+
+.footer-data {
+  padding: 45px 15px 45px 25px;
+}
+
+.footer-title {
+  font-family: "Myriad Pro Condensed";
+  color: #fff;
+}
+
+.footer-title~div {
+  font-family: Tahoma;
+  color: #fff;
+  font-size: 10pt;
+}
+
+.footer-icon {
+  background-repeat: no-repeat;
+  background-position: center center;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.footer-address-icon {
+  background-image: url('/images/footer_address_icon.png');
+}
+
+.footer-phone-icon {
+  background-image: url('/images/footer_phone_icon.png');
+}
+
+.footer-email-icon {
+  background-image: url('/images/footer_email_icon.png');
+}
+
+.footer-menu {
+  background: #fff;
+}
+
+.footer-logo {
+  width: 350px;  
+  min-height: 75px;
+}
+
+.footer-menu-item {
+  padding: 30px 0;
+  color: #3a3a3a;
+  font-family: Tahoma;
+  font-size: 12pt;
+  text-decoration: none;
+  text-align: center;
+  transition: text-shadow .1s;
+}
+
+.footer-menu-item:hover {
+  text-decoration: none;
+  color: #3a3a3a;
+  text-shadow: 0px 0px 5px #3a3a3a;
+}
+
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 9pt;
+  padding: 10px 0;
+}
+
+
+/* main-content*/
+
+.main-content {
+  color: #3a3a3a;
+}
+
+.main-content h2 {
+  text-align: center;
+  color: #ce2500;
+  font-family: "Myriad Pro Condensed";
+  font-size: calc(1em + 1vw);
+  font-weight: bold;
+  margin: 0 0 30px 0;
+}
+
+.main-content h1 {
+  text-align: center;
+  color: #ce2500;
+  font-family: "Myriad Pro Condensed";
+  font-size: calc(1em + 1vw);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.main-content h3 {
+  font-family: "Myriad Pro Condensed";
+  font-size: 22pt;
+  margin: 40px 0 20px 0;
+}
+
+.main-content p {
+  text-align: justify;
+}
+
+.main-content ul {
+  list-style-type: square;
+  color: red;
+}
+
+.main-content li span {
+  color: #3a3a3a;
+}
+
+.main-about {
+  padding: 30px 15px;
+}
+
+
+/*breadcrumb*/
+
+nav .breadcrumb {
+  margin: 0;
+  background: #fff;
+}
+
+nav .breadcrumb a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+/* contacts */
+.contacts-ya-map{
+  width: 100%;
+  height: 400px;
+}
+.contacts-ya-map iframe{
+  width: 100%;
+  height: 100%;
+}
+.contacts-header-phones {
+  font-family: Tahoma;
+  font-size: 13pt;
+}
+.contacts-phone_icon{  
+  background-image: url('/images/phone_icon_black.png');
+  background-repeat: no-repeat;
+  width: 12px;
+  margin: 6px;
+}

@@ -1,0 +1,129 @@
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: rgb(245, 245, 245)!important;
+}
+
+header {
+  height: 50px;
+  background: rgb(40, 42, 51);
+  padding: 0 30px;
+  color: rgb(240, 240, 240)!important;
+  width: 100vw;
+}
+
+header a {
+  color: rgb(240, 240, 240);
+}
+
+header a:hover {
+  text-decoration: none!important;
+  color: rgb(240, 240, 240);
+}
+
+.link-logout {
+  border: 1px solid rgb(140, 139, 139, 0);
+  padding: 3px;
+  transition: 0.2s;
+}
+
+.link-logout:hover {
+  border: 1px solid rgb(140, 139, 139);
+  border-radius: 4px;
+  background: rgb(49, 46, 58);
+}
+
+.navbar-toggler-icon {
+  width: 1em!important;
+  height: 1em!important;
+}
+
+.sidebar {
+  width: 200px;
+  background: rgb(50, 47, 60);
+  position: fixed;
+  margin-top: 50px;
+  z-index:10;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  transition: 0.2s;
+  width: 125px;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background: rgb(220, 220, 220);
+}
+
+.sidebar ul li a {
+  color: rgb(240, 240, 240);
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li:hover a {
+  color: rgb(50, 47, 60);
+}
+
+.sidebar ul .menu-selected {
+  background: rgb(225, 225, 225);
+}
+
+.sidebar ul .menu-selected a {
+  color: rgb(50, 47, 60);
+  font-weight: bold;
+}
+
+.sidebar ul div{
+  color: white;
+  font-weight: bold;
+}
+
+.content-wrap {
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+.btn-new-claim{
+  font-size: 10pt;
+  text-align: center;
+  margin: 8px 0!important;
+}
+
+@media(max-width: 768px) {
+  .content-wrap {
+    margin-left: 0px;
+  }
+  .sidebar {
+    left: -200px;
+  }
+}
+
+#app{
+  height: calc(100vh - 50px);
+}
+
+.h-100pc{
+  height: 100%;
+}
+.flex-1{
+  flex: 1;
+}
+.flex-2{
+  flex: 2;
+}
+.flex-3{
+  flex: 3;
+}
