@@ -34,21 +34,6 @@
             <li><span>запуск в работу;</span></li>
             <li><span>проведение пневмоаудита и т.д.</span></li>
           </ul>
-          <h1>МЫ ОФИЦИАЛЬНЫЕ ДИЛЛЕРЫ</h1>
-          <div class="row justify-content-between">
-            <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/karcher_logo.png"/></div>
-            <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/bosch_logo.png"/></div>
-            <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/wagner_logo.png"/></div>
-            {{-- <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/karcher_logo.png"/></div>
-            <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/karcher_logo.png"/></div>
-            <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/bosch_logo.png"/></div>
-            <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/wagner_logo.png"/></div>
-            <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/karcher_logo.png"/></div>
-            <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/karcher_logo.png"/></div>
-            <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/bosch_logo.png"/></div>
-            <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/wagner_logo.png"/></div>
-            <div class="col-6 col-lg-3 logo-firm logo-firm-o100"><img src="/images/karcher_logo.png"/></div> --}}
-          </div>
         </div>
       </div>
     </div>
