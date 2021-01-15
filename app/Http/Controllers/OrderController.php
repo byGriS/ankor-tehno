@@ -17,7 +17,7 @@ class OrderController extends Controller {
     $product->count = $request->product_count;
     $products = [];
     array_push($products, $product->toArray());
-    Mail::to("gris_gc@mail.ru")->send(new OrderShipped($order, $products));
+    Mail::to("ankor-tehno@mail.ru")->send(new OrderShipped($order, $products));
     return redirect()->back()->withErrors(['Заказ успешно оформлен!']);
   }
 
@@ -28,7 +28,7 @@ class OrderController extends Controller {
     $order->save();
     $basket->payload = "";
     $basket->save();
-    Mail::to("gris_gc@mail.ru")->send(new OrderShipped($order, $products));
+    Mail::to("ankor-tehno@mail.ru")->send(new OrderShipped($order, $products));
     return redirect('/')->withErrors(['Заказ успешно оформлен!']);
   }
 }
