@@ -9,30 +9,9 @@
   <meta name="csrf-token" content="{{csrf_token()}}">
   {{-- <link rel="stylesheet" href="{{asset('css/index.css')}}"> --}}
   <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/myriadpro-cond.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <style>
-    @font-face {
-      font-family: 'Myriad Pro';
-      src: url('http://ankor-tehno.grisserver.keenetic.pro/fonts/MyriadPro/MyriadPro-Cond.eot');
-      src: local('Myriad Pro Condensed'), local('MyriadPro-Cond'),
-        url('http://ankor-tehno.grisserver.keenetic.pro/fonts/MyriadPro/MyriadPro-Cond.eot?#iefix') format('embedded-opentype'),
-        url('http://ankor-tehno.grisserver.keenetic.pro/fonts/MyriadPro/MyriadPro-Cond.woff') format('woff'),
-        url('http://ankor-tehno.grisserver.keenetic.pro/fonts/MyriadPro/MyriadPro-Cond.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Myriad Pro';
-      src: url('http://ankor-tehno.grisserver.keenetic.pro/fonts/MyriadPro/MyriadPro-Regular.eot');
-      src: local('Myriad Pro Regular'), local('MyriadPro-Regular'),
-        url('http://ankor-tehno.grisserver.keenetic.pro/fonts/MyriadPro/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
-        url('http://ankor-tehno.grisserver.keenetic.pro/fonts/MyriadPro/MyriadPro-Regular.woff') format('woff'),
-        url('http://ankor-tehno.grisserver.keenetic.pro/fonts/MyriadPro/MyriadPro-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-  </style>
+ 
 </head>
 
 <body>
