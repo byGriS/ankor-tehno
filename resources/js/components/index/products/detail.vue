@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="d-none d-md-block col-3 manufacturer">
-        <h1>{{ product["manufacturer"] }}</h1>
+        <!-- <h1>{{ product["manufacturer"] }}</h1> -->
       </div>
     </div>
     <div class="d-flex justify-content-center">

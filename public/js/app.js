@@ -29050,9 +29050,7 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "d-none d-md-block col-3 manufacturer" }, [
-          _c("h1", [_vm._v(_vm._s(_vm.product["manufacturer"]))])
-        ])
+        _c("div", { staticClass: "d-none d-md-block col-3 manufacturer" })
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "d-flex justify-content-center" }, [
