@@ -1,8 +1,17 @@
 @extends('layouts.layout')
 
 @section('content')
-<header-slider></header-slider>
-@include('static.logofirms')
+{{-- <header-slider></header-slider> --}}
+<div class="container-my">
+  <div class="slideshow">
+    <div id="slideshow0" class="nivoSlider">
+      <img src="/images/header/slide1.png" alt="Продажа промышленного оборудованя" />
+      <img src="/images/header/slide2.jpg" alt="Продажа промышленного оборудованя" />
+    </div>
+  </div>
+</div>
+<brand-slider></brand-slider>
+{{-- @include('static.logofirms') --}}
 <div class="main-content">
   <div class="bg-grey">
     <div class="container-my py-5">

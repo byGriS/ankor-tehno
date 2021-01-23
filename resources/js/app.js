@@ -8,6 +8,12 @@ window.toggleSidebar = function() {
     sidebar.style.left = "0px";
   }
 }
+$(window).on('load', function() {
+  $('#slideshow0').nivoSlider({
+    controlNav: false,
+    directionNav: false
+  });
+});
 
 window.Vue = require('vue');
 
@@ -25,6 +31,7 @@ import ProductDetail from './components/index/products/detail';
 import BasketDetail from './components/index/basket/detail';
 import SidebarCategories from './components/index/sidebar/categories'
 import SidebarFilter from './components/index/sidebar/filter'
+import BrandSlider from './components/index/brand_slider'
 
 const app = new Vue({
   el: '#app',
@@ -40,17 +47,18 @@ const app = new Vue({
     BasketDetail,
     SidebarCategories,
     SidebarFilter,
+    BrandSlider,
   },
-  beforeMount(){
+  beforeMount() {
     let token = localStorage.getItem('token');
-    if (token == null){
+    if (token == null) {
       localStorage.setItem('token', window.axios.defaults.headers.common['X-CSRF-TOKEN']);
       token = localStorage.getItem('token');
     }
     this.$store.state.token = token;
     window.axios
       .get('/getBasket', {
-        params:{
+        params: {
           token: token
         }
       })
