@@ -11,7 +11,7 @@ class CategoryRepository extends BaseRepository {
   }
 
   public function getAllMainWithChilds() {
-    $categories = $this->model->whereCategoryId(null)->with('childs')->with('image')->with('childs.childs')->get();
+    $categories = $this->model->whereCategoryId(null)->orderBy('title','asc')->with('childs')->with('image')->with('childs.childs')->get();
     //dd($categories);
     return $categories;
   }
@@ -27,7 +27,7 @@ class CategoryRepository extends BaseRepository {
   }
 
   public function getOnlyMain() {
-    $result = $this->model->whereCategoryId(null)->get();
+    $result = $this->model->whereCategoryId(null)->orderBy('title','asc')->get();
     return $result;
   }
 
