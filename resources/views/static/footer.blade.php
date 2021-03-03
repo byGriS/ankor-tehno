@@ -36,6 +36,6 @@
     </div>
   </div>
   <div class="copyright">
-    Copyright 2009-2014 «АНКОР-ТЕХНО»
+    Copyright 2009-2021 «АНКОР-ТЕХНО»
   </div>
 </footer>
