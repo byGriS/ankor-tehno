@@ -160,6 +160,7 @@
 }
 
 
+
 /*header menu */
 
 .menu-top-wrapper {
@@ -209,6 +210,32 @@
   right: 30px;
 }
 
+.slider-text{
+  display: block; 
+  position: absolute;
+  z-index: 10;
+  top:40%;
+  left:10%;
+}
+.slider-title{
+  color: #eee;
+  font-size: 3vw;
+  font-weight: bold;
+  line-height: 1em;
+  margin-bottom: 5%;
+}
+.btn-in-slider{
+  font-size: 1.2vw;
+  background: #ce2500;
+  color: #eee;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+.btn-in-slider:hover{
+  text-decoration: none;
+  color: #eee;
+}
+
 
 /*  logo firms */
 
@@ -225,18 +252,6 @@
 .logo-firm:hover {
   opacity: 100%;
 }
-
-/*.logo-karcher {
-  background-image: url('/images/karcher_logo.png');
-}
-
-.logo-bosch {
-  background-image: url('/images/bosch_logo.png');
-}
-
-.logo-wagner {
-  background-image: url('/images/wagner_logo.png');
-}*/
 
 .logo-firm-o100{  
   opacity: 100%;

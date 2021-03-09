@@ -25,7 +25,7 @@ export default {
         autoplay: true,
         pagination: false,
         //cover: true,
-        interval: 3000,
+        interval: 1000,
       },
     };
   },

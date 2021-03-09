@@ -5,9 +5,14 @@
 <div class="container-my">
   <div class="slideshow">
     <div id="slideshow0" class="nivoSlider">
+      <img src="/images/header/slide3.jpg" alt="Продажа промышленного оборудованя" />
       <img src="/images/header/slide1.png" alt="Продажа промышленного оборудованя" />
       <img src="/images/header/slide2.jpg" alt="Продажа промышленного оборудованя" />
-    </div>
+    </div>    
+  </div>
+  <div id="slide3Data" class="slider-text">
+    <div class="slider-title">СКИДКИ С ПЕРВОГО ЗАКАЗА<br/>ПРИ ЗАКЛЮЧЕНИИ ДОГОВОРА</div>
+    <div><a href="{{route('catalog', [], false)}}" class="btn-in-slider">В КАТАЛОГ</a></div>
   </div>
 </div>
 <brand-slider></brand-slider>

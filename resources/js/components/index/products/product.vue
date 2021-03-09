@@ -111,7 +111,6 @@ export default {
           count: this.count,
         })
         .then((response) => {
-          console.log(response.data);
           this.$store.state.basket.items = response.data;
         });
     },

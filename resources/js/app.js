@@ -11,7 +11,17 @@ window.toggleSidebar = function() {
 $(window).on('load', function() {
   $('#slideshow0').nivoSlider({
     controlNav: false,
-    directionNav: false
+    directionNav: false,
+    pauseTime: 6000,
+    afterChange: function () {
+      if ($('#slideshow0').data('nivo:vars').currentSlide == 0) {
+        let dataSlider = document.getElementById('slide3Data');
+        dataSlider.style.display = "block";      
+      } else {        
+        let dataSlider = document.getElementById('slide3Data');
+        dataSlider.style.display = "none";
+      }
+    }
   });
 });
 
@@ -63,7 +73,6 @@ const app = new Vue({
         }
       })
       .then(response => {
-        //console.log(response);
         this.$store.state.basket.items = response.data;
       })
   }

@@ -103,14 +103,12 @@ export default {
     },
   },
   beforeMount() {
-    console.log(this.cur_filter);
     for (const [key, value] of Object.entries(this.cur_filter)) {
       if (key == 'page')
       continue;
       this.curFilter.push(Object.assign({}, { title: key, value: value }));
     }
 
-    console.log(this.curFilter);
     let manufacturers = [];
     this.prods_manufcturer.forEach((prod) => {
       let selected = false;

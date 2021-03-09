@@ -16,9 +16,6 @@ export default {
     getMainSlug(){
       return this.mainSlug + this.category.slug +'/';
     }
-  },
-  beforeMount(){
-    //console.log(this.mainSlug);
   }
 };
 </script>

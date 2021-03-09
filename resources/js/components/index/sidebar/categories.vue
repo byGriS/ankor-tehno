@@ -45,7 +45,6 @@ export default {
       this.windowWidth = window.innerWidth;
     },
     showChild(item) {
-        console.log(item);
         this.oldCategoryId = item.category_id;
         this.categoriesShow = item.childs;
         this.isMain = false;
@@ -70,7 +69,6 @@ export default {
   },
   beforeMount() {
     this.categoriesShow = this.categories;
-    console.log( this.categoriesShow);
   },
   mounted() {
     this.$nextTick(() => {

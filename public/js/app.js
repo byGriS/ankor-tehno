@@ -8745,7 +8745,7 @@ __webpack_require__.r(__webpack_exports__);
         autoplay: true,
         pagination: false,
         //cover: true,
-        interval: 3000
+        interval: 1000
       }
     };
   }
@@ -8999,7 +8999,6 @@ __webpack_require__.r(__webpack_exports__);
         id: this.product.id,
         count: this.count
       }).then(function (response) {
-        console.log(response.data);
         _this.$store.state.basket.items = response.data;
       });
     }
@@ -9063,7 +9062,6 @@ __webpack_require__.r(__webpack_exports__);
       this.windowWidth = window.innerWidth;
     },
     showChild: function showChild(item) {
-      console.log(item);
       this.oldCategoryId = item.category_id;
       this.categoriesShow = item.childs;
       this.isMain = false;
@@ -9088,7 +9086,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   beforeMount: function beforeMount() {
     this.categoriesShow = this.categories;
-    console.log(this.categoriesShow);
   },
   mounted: function mounted() {
     var _this2 = this;
@@ -9130,8 +9127,6 @@ __webpack_require__.r(__webpack_exports__);
     getMainSlug: function getMainSlug() {
       return this.mainSlug + this.category.slug + '/';
     }
-  },
-  beforeMount: function beforeMount() {//console.log(this.mainSlug);
   }
 });
 
@@ -9261,8 +9256,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
   beforeMount: function beforeMount() {
     var _this = this;
 
-    console.log(this.cur_filter);
-
     for (var _i = 0, _Object$entries = Object.entries(this.cur_filter); _i < _Object$entries.length; _i++) {
       var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
           key = _Object$entries$_i[0],
@@ -9275,7 +9268,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       }));
     }
 
-    console.log(this.curFilter);
     var manufacturers = [];
     this.prods_manufcturer.forEach(function (prod) {
       var selected = false;
@@ -9535,7 +9527,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* sidebar categories */\n.sidebar[data-v-6641d457] {\r\n  background: white;\r\n  padding: 20px 0;\r\n  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);\r\n  margin-bottom: 30px;\n}\n.sidebar .category[data-v-6641d457] {\r\n  position: relative;\n}\n.sidebar .category a[data-v-6641d457] {\r\n  display: block;\r\n  border-top: 1px solid #f4f4f4;\r\n  padding: 10px 25px;\r\n  font-family: Tahoma;\r\n  font-size: 10pt;\r\n  text-transform: uppercase;\r\n  cursor: pointer;\r\n  color: #3a3a3a;\r\n  text-decoration: none;\n}\n.sidebar .elem[data-v-6641d457] {\r\n  display: block;\r\n  border-top: 1px solid #f4f4f4;\r\n  padding: 10px 25px;\r\n  font-family: Tahoma;\r\n  font-size: 10pt;\r\n  text-transform: uppercase;\r\n  cursor: pointer;\r\n  color: #3a3a3a;\r\n  text-decoration: none;\n}\n.elem-back[data-v-6641d457] {\r\n  background: #eee;\n}\n.sidebar .category[data-v-6641d457]:last-child {\r\n  border-bottom: 1px solid #f4f4f4;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* sidebar categories */\n.sidebar[data-v-6641d457] {\r\n  background: white;\r\n  padding: 20px 0;\r\n  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);\r\n  margin-bottom: 30px;\n}\n.sidebar .category[data-v-6641d457] {\r\n  position: relative;\n}\n.sidebar .category a[data-v-6641d457] {\r\n  display: block;\r\n  border-top: 1px solid #f4f4f4;\r\n  padding: 10px 25px;\r\n  font-family: Tahoma;\r\n  font-size: 10pt;\r\n  text-transform: uppercase;\r\n  cursor: pointer;\r\n  color: #3a3a3a;\r\n  text-decoration: none;\n}\n.sidebar .elem[data-v-6641d457] {\r\n  display: block;\r\n  border-top: 1px solid #f4f4f4;\r\n  padding: 10px 25px;\r\n  font-family: Tahoma;\r\n  font-size: 10pt;\r\n  text-transform: uppercase;\r\n  cursor: pointer;\r\n  color: #3a3a3a;\r\n  text-decoration: none;\n}\n.elem-back[data-v-6641d457] {\r\n  background: #eee;\n}\n.sidebar .category[data-v-6641d457]:last-child {\r\n  border-bottom: 1px solid #f4f4f4;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -43428,7 +43420,18 @@ window.toggleSidebar = function () {
 $(window).on('load', function () {
   $('#slideshow0').nivoSlider({
     controlNav: false,
-    directionNav: false
+    directionNav: false,
+    pauseTime: 6000,
+    afterChange: function afterChange() {
+      if ($('#slideshow0').data('nivo:vars').currentSlide == 0) {
+        var dataSlider = document.getElementById('slide3Data');
+        dataSlider.style.display = "block";
+      } else {
+        var _dataSlider = document.getElementById('slide3Data');
+
+        _dataSlider.style.display = "none";
+      }
+    }
   });
 });
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
@@ -43477,7 +43480,6 @@ var app = new Vue({
         token: token
       }
     }).then(function (response) {
-      //console.log(response);
       _this.$store.state.basket.items = response.data;
     });
   }
