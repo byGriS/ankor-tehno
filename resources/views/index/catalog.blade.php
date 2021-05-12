@@ -48,3 +48,7 @@
 @section('title')
 {{$category->seo_title}}
 @endsection
+
+@section('description')
+{{$category->seo_description}}
+@endsection

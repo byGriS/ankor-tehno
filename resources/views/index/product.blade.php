@@ -18,3 +18,11 @@
 </div>
 @include('components.oneclick')
 @endsection
+
+@section('title')
+{{$product->seo_title}}
+@endsection
+
+@section('description')
+{{$product->seo_description}}
+@endsection
