@@ -60,4 +60,14 @@ class CategoryRepository extends BaseRepository {
     
     return $slug;
   }
+
+  public function store($id, $data){
+    $category = $this->getById($id);
+    $category->seo_title = $data['seo_title'];
+    $category->seo_description = $data['seo_description'];
+    $category->context_title = $data['context_title'];
+    $category->context_body = $data['context_body'];
+    $category->save();
+    return true;
+  }
 }

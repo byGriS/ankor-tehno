@@ -14,10 +14,11 @@
           @endif
         </div>
         <div class="col-12 col-sm-8">
+          <h1 class="text-left">{{$category->title}}</h1>
           <div class="row align-self-stretch">
-            @foreach($categories as $category)
+            @foreach($categories as $elem)
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 pr-5px">
-              <category :category="{{$category}}"></category>
+              <category :category="{{$elem}}"></category>
             </div>
             @endforeach
           </div>
@@ -29,8 +30,12 @@
             @endforeach
           </div>
           @if(count($products)>0)
-          <div>{{ $products->links() }}</div>
+          <div>{{ $products->appends(Request::all())->links() }}</div>
           @endif
+          <div class="section-context pt-5">
+            <h2>{{$category->context_title}}</h2>
+            <div>{!!$category->context_body!!}</div>
+          </div>
         </div>
 
       </div>
@@ -38,4 +43,8 @@
   </div>
 </div>
 @include('components.oneclick')
+@endsection
+
+@section('title')
+{{$category->seo_title}}
 @endsection

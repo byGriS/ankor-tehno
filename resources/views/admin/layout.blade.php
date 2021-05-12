@@ -31,9 +31,9 @@
   <div class="h-100">
     <div class="sidebar h-100 ">
       <ul>
-        <li class="{{ Request::route()->getName() == "admin.orders"? 'menu-selected' : ''}}"><a href="{{route('admin.orders')}}">Заказы</a></li>
+        {{-- <li class="{{ Request::route()->getName() == "admin.orders"? 'menu-selected' : ''}}"><a href="{{route('admin.orders')}}">Заказы</a></li> --}}
+        <li class="{{ Request::route()->getName() == "admin.categories"? 'menu-selected' : ''}}"><a href="{{route('admin.categories')}}">Разделы</a></li>
         <li class="{{ Request::route()->getName() == "admin.products"? 'menu-selected' : ''}}"><a href="{{route('admin.products')}}">Товары</a></li>
-        <li ><a href="{{route('dev.refreshdb')}}">Обновить базу данных</a></li>
       </ul>
     </div>
     <div id="app" class="content-wrap">

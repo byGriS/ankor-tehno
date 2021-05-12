@@ -8,29 +8,35 @@ window.toggleSidebar = function() {
     sidebar.style.left = "0px";
   }
 }
-$(window).on('load', function() {
-  $('#slideshow0').nivoSlider({
-    controlNav: false,
-    directionNav: false,
-    pauseTime: 6000,
-    afterChange: function () {
-      if ($('#slideshow0').data('nivo:vars').currentSlide == 0) {
-        let dataSlider = document.getElementById('slide3Data');
-        dataSlider.style.display = "block";      
-      } else {        
-        let dataSlider = document.getElementById('slide3Data');
-        dataSlider.style.display = "none";
+$(window).on('load', function () {
+  if (document.querySelector('#slideshow0') != null) {
+    $('#slideshow0').nivoSlider({
+      controlNav: false,
+      directionNav: false,
+      pauseTime: 6000,
+      afterChange: function() {
+        if ($('#slideshow0').data('nivo:vars').currentSlide == 0) {
+          let dataSlider = document.getElementById('slide3Data');
+          dataSlider.style.display = "block";
+        } else {
+          let dataSlider = document.getElementById('slide3Data');
+          dataSlider.style.display = "none";
+        }
       }
-    }
-  });
+    });
+  }
 });
 
 window.Vue = require('vue');
 
 import store from './store'
+import CKEditor from '@ckeditor/ckeditor5-vue2';
+Vue.use( CKEditor );
 
 Vue.component('category', require('./components/index/sidebar/category.vue').default);
+Vue.component('branch', require('./components/admin/categories/branch.vue').default);
 
+import AdminCategoriesIndex from './components/admin/categories/index';
 import AdminProductsIndex from './components/admin/products/products_index';
 import BasketIcon from './components/index/basket/icon';
 import HeaderSlider from './components/index/header_slider.vue';
@@ -47,6 +53,7 @@ const app = new Vue({
   el: '#app',
   store,
   components: {
+    AdminCategoriesIndex,
     AdminProductsIndex,
     BasketIcon,
     HeaderSlider,

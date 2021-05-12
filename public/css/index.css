@@ -57,7 +57,7 @@
 .page-item.disabled .page-link{
   background: #5a5a5a!important;
 }
-.modal-header h1{
+.modal-header p{
   color: #ce2500;
   font-family: "Myriad Pro Condensed";
   font-size: 20pt;
@@ -344,6 +344,15 @@ footer {
   color: #3a3a3a;
 }
 
+.main-content h1 {
+  text-align: center;
+  color: #ce2500;
+  font-family: "Myriad Pro Condensed";
+  font-size: calc(1.2em + 1vw);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
 .main-content h2 {
   text-align: center;
   color: #ce2500;
@@ -353,13 +362,16 @@ footer {
   margin: 0 0 30px 0;
 }
 
-.main-content h1 {
-  text-align: center;
-  color: #ce2500;
+.main-content .section-context h2 {
+  text-align: left;
+  color: #000000;
   font-family: "Myriad Pro Condensed";
   font-size: calc(1em + 1vw);
   font-weight: bold;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
+}
+.main-content .section-context div {
+white-space: pre-wrap;
 }
 
 .main-content h3 {

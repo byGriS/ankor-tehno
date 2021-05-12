@@ -45,9 +45,15 @@ Route::group(['middleware' => ['auth']], function () {
       return redirect('/admin/orders');
     });
     Route::get('/admin/orders', 'App\Http\Controllers\Admin\OrderController@index')->name('admin.orders');
+    Route::get('/admin/categories', 'App\Http\Controllers\Admin\CategoryController@index')->name('admin.categories');
+    Route::post('/admin/categories/{id}', 'App\Http\Controllers\Admin\CategoryController@store');
     Route::get('/admin/products', 'App\Http\Controllers\Admin\ProductController@index')->name('admin.products');
     Route::get('/admin/getCateoriesById', 'App\Http\Controllers\Admin\ProductController@getCateoriesById');
 
     
 });
 Route::get('/dev/refreshdb', 'App\Http\Controllers\DevController@refreshdb')->name('dev.refreshdb');
+Route::get('/dev/setseocategories', 'App\Http\Controllers\DevController@set_seo_cat');
+Route::get('/dev/setseoproducts', 'App\Http\Controllers\DevController@set_seo_product');
+
+

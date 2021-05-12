@@ -67,9 +67,13 @@ class ProductController extends Controller {
     }
     /* */
     return view('index.catalog')->with('breadcrumbs', $breadcrumbs)
-      ->with('categories', $categories)->with('products', $products)
-      ->with('categoriesSidebar', $categoriesSidebar)->with('showCategories', $showCategories)
-      ->with('filterProperties', $filterProperties)->with('curFilter', $request->all())
+      ->with('category', $category)
+      ->with('categories', $categories)
+      ->with('products', $products)
+      ->with('categoriesSidebar', $categoriesSidebar)
+      ->with('showCategories', $showCategories)
+      ->with('filterProperties', $filterProperties)
+      ->with('curFilter', $request->all())
       ->with('manufacturer',$manufacturer);
   }
 

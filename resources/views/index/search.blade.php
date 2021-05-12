@@ -18,7 +18,7 @@
             @endforeach
           </div>
           @if(count($products)>0)
-          <div>{{ $products->links() }}</div>
+          <div>{{ $products->appends(Request::all())->links() }}</div>
           @endif
         </div>
 

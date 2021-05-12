@@ -25,7 +25,7 @@
           <sidebar-categories :categories="{{$categoriesSidebar}}"></sidebar-categories>
         </div>
         <div class="col-12 col-sm-8">
-          <h2>ЗИМНИЕ ПРЕДЛОЖЕНИЯ</h2>
+          <h2>ВЕСЕННИЕ ПРЕДЛОЖЕНИЯ</h2>
           <div class="row align-self-stretch">
             @foreach ($productsStock as $item)
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-5 pr-5px">

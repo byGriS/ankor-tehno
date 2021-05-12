@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{config('app.name')}}</title>
+  <title>@yield('title', 'Акнор-Техно')</title>
   <meta name="csrf-token" content="{{csrf_token()}}">
   {{-- <link rel="stylesheet" href="{{asset('css/index.css')}}"> --}}
   <link rel="stylesheet" href="/css/index.css">
@@ -25,9 +25,6 @@
     <brand-slider></brand-slider>
     @include('static.footer')
   </div>
-
-
-
 </body>
 
 
@@ -44,7 +41,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title">ОФОРМЛЕНИЕ ЗАЯВКИ</h1>
+        <p class="modal-title">ОФОРМЛЕНИЕ ЗАЯВКИ</p>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

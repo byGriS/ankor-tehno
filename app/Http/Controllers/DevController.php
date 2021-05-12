@@ -14,7 +14,7 @@ use Throwable;
 
 class DevController extends Controller {
   public function refreshdb(Request $request) {
-    
+    return false;
     if ($request->catalog == null)
      return "error";
     $mainCategories = Storage::disk('public')->directories();
@@ -23,6 +23,7 @@ class DevController extends Controller {
   }
 
   public function parseDirs($directions, $parentCategory, $catalog, $firstLoop) {
+    return false;
     foreach ($directions as $direction) {
       if ($firstLoop && $direction != $catalog)
         continue;
@@ -94,6 +95,24 @@ class DevController extends Controller {
         //$nestedDirections = Storage::disk('public')->directories($direction);
         $this->parseDirs($nestedDirections, $category, null, false);
       }
+    }
+  }
+
+  public function set_seo_cat(){
+    $categories = Category::all();
+    foreach($categories as $category){
+      $category->seo_title = $category->title . ': купить в Самаре, цена - магазин АНКОР-ТЕХНО';
+      $category->seo_description = $category->title . ' - продажа в Самаре оптом и в розницу. Доступные цены. Доставка по всей России.';
+      $category->save();
+    }
+  }
+
+  public function set_seo_product(){
+    $products = Product::with('category')->take(5)->get();
+    foreach($products as $product){
+      $product->seo_title = $product->category->title . ': ' .$product->title . ' - купить в Самаре';
+      $product->seo_description = $product->title . ' - продажа в Самаре оптом и в розницу. Доступные цены. Доставка по всей России.';
+      $product->save();
     }
   }
 }
