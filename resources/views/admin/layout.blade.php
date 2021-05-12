@@ -33,7 +33,7 @@
       <ul>
         {{-- <li class="{{ Request::route()->getName() == "admin.orders"? 'menu-selected' : ''}}"><a href="{{route('admin.orders')}}">Заказы</a></li> --}}
         <li class="{{ Request::route()->getName() == "admin.categories"? 'menu-selected' : ''}}"><a href="{{route('admin.categories')}}">Разделы</a></li>
-        <li class="{{ Request::route()->getName() == "admin.products"? 'menu-selected' : ''}}"><a href="{{route('admin.products')}}">Товары</a></li>
+        {{-- <li class="{{ Request::route()->getName() == "admin.products"? 'menu-selected' : ''}}"><a href="{{route('admin.products')}}">Товары</a></li> --}}
       </ul>
     </div>
     <div id="app" class="content-wrap">

@@ -42,7 +42,7 @@ Route::get('/search', 'App\Http\Controllers\ProductController@search')->name('se
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin', function (){
-      return redirect('/admin/orders');
+      return redirect('/admin/categories');
     });
     Route::get('/admin/orders', 'App\Http\Controllers\Admin\OrderController@index')->name('admin.orders');
     Route::get('/admin/categories', 'App\Http\Controllers\Admin\CategoryController@index')->name('admin.categories');
