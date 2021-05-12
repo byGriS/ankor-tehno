@@ -35,7 +35,10 @@
       </div>
       <div
         class="categoryTitle"
-        :class="{ selectedCategory: isCurrentSelectedCategory, changed: category.changed }"
+        :class="{
+          selectedCategory: isCurrentSelectedCategory,
+          changed: isChanged,
+        }"
         @click="selectingCategory(category)"
       >
         {{ category.title }}
@@ -82,6 +85,9 @@ export default {
     isCurrentSelectedCategory() {
       if (this.selectedCategory != null)
         return this.category.id == this.selectedCategory.id;
+    },
+    isChanged(){
+      return this.category.changed == true
     }
   },
   methods: {
@@ -90,6 +96,9 @@ export default {
       this.isShowChildren = !this.isShowChildren;
     },
     selectingCategory(val) {
+      if (this.selectedCategory != null && this.selectedCategory.changed) {
+        this.selectedCategory.changed = false;
+      }
       this.$emit("select", val);
     },
   },
@@ -118,7 +127,7 @@ export default {
   background: rgb(189, 224, 223);
   border-radius: 3px;
 }
-.changed::after{
-  content: '*';
+.changed::after {
+  content: "*";
 }
 </style>

@@ -18,7 +18,7 @@
             class="form-control form-control-sm"
             id="seo_title"
             v-model="changeData.seo_title"
-            @change="selectedCategory.changed= true"
+            @change="selectedCategory.changed = true"
           />
         </div>
       </div>
@@ -30,7 +30,7 @@
             class="form-control form-control-sm"
             id="seo_description"
             v-model="changeData.seo_description"
-            @change="selectedCategory.changed= true"
+            @change="selectedCategory.changed = true"
           />
         </div>
       </div>
@@ -42,7 +42,7 @@
             class="form-control form-control-sm"
             id="context_title"
             v-model="changeData.context_title"
-            @change="selectedCategory.changed= true"
+            @change="selectedCategory.changed = true"
           />
         </div>
       </div>
@@ -56,7 +56,7 @@
             :config="editorConfig"
             tag-name="textarea"
             :name="'context_body'"
-            @input="selectedCategory.changed= true"
+            @focus="selectedCategory.changed = true"
           ></ckeditor>
         </div>
       </div>
@@ -109,7 +109,7 @@ export default {
       this.changeData.seo_description = val.seo_description;
       this.changeData.context_title = val.context_title;
       this.changeData.context_body = val.context_body?val.context_body:'';
-      
+      this.selectedCategory.changed = false;
     },
   },
   methods: {

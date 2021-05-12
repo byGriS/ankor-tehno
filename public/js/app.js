@@ -8168,6 +8168,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["category", "pos", "selectedCategory"],
   data: function data() {
@@ -8189,6 +8192,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     isCurrentSelectedCategory: function isCurrentSelectedCategory() {
       if (this.selectedCategory != null) return this.category.id == this.selectedCategory.id;
+    },
+    isChanged: function isChanged() {
+      return this.category.changed == true;
     }
   },
   methods: {
@@ -8197,6 +8203,10 @@ __webpack_require__.r(__webpack_exports__);
       this.isShowChildren = !this.isShowChildren;
     },
     selectingCategory: function selectingCategory(val) {
+      if (this.selectedCategory != null && this.selectedCategory.changed) {
+        this.selectedCategory.changed = false;
+      }
+
       this.$emit("select", val);
     }
   }
@@ -8313,6 +8323,7 @@ __webpack_require__.r(__webpack_exports__);
       this.changeData.seo_description = val.seo_description;
       this.changeData.context_title = val.context_title;
       this.changeData.context_body = val.context_body ? val.context_body : '';
+      this.selectedCategory.changed = false;
     }
   },
   methods: {
@@ -9645,7 +9656,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.symbolWrap[data-v-354abf3a] {\r\n  width: 20px;\r\n  text-align: center;\r\n  padding: 2px 5px;\n}\n.symbolWrap span[data-v-354abf3a] {\r\n  cursor: pointer;\n}\n.categoryTitle[data-v-354abf3a] {\r\n  cursor: pointer;\r\n  padding: 2px 5px;\r\n  transition: all 0.2s ease;\n}\n.categoryTitle[data-v-354abf3a]:hover {\r\n  background: rgb(164, 210, 75);\r\n  border-radius: 3px;\n}\n.selectedCategory[data-v-354abf3a] {\r\n  background: rgb(189, 224, 223);\r\n  border-radius: 3px;\n}\n.changed[data-v-354abf3a]::after{\r\n  content: '*';\n}\r\n", ""]);
+exports.push([module.i, "\n.symbolWrap[data-v-354abf3a] {\r\n  width: 20px;\r\n  text-align: center;\r\n  padding: 2px 5px;\n}\n.symbolWrap span[data-v-354abf3a] {\r\n  cursor: pointer;\n}\n.categoryTitle[data-v-354abf3a] {\r\n  cursor: pointer;\r\n  padding: 2px 5px;\r\n  transition: all 0.2s ease;\n}\n.categoryTitle[data-v-354abf3a]:hover {\r\n  background: rgb(164, 210, 75);\r\n  border-radius: 3px;\n}\n.selectedCategory[data-v-354abf3a] {\r\n  background: rgb(189, 224, 223);\r\n  border-radius: 3px;\n}\n.changed[data-v-354abf3a]::after {\r\n  content: \"*\";\n}\r\n", ""]);
 
 // exports
 
@@ -28878,7 +28889,7 @@ var render = function() {
           staticClass: "categoryTitle",
           class: {
             selectedCategory: _vm.isCurrentSelectedCategory,
-            changed: _vm.category.changed
+            changed: _vm.isChanged
           },
           on: {
             click: function($event) {
@@ -29099,7 +29110,7 @@ var render = function() {
                     name: "context_body"
                   },
                   on: {
-                    input: function($event) {
+                    focus: function($event) {
                       _vm.selectedCategory.changed = true
                     }
                   },
