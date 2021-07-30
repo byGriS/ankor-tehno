@@ -55,6 +55,7 @@ class ProductController extends Controller {
       if (count($categories) == 0)
         $showCategories = false;
     } else {
+      $category = null;
       $categories = $categoryRepository->getAllMainWithChilds();
     }
     $categoriesSidebar = $categoryRepository->getAllMainWithChilds();

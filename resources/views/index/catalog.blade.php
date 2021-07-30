@@ -14,7 +14,9 @@
           @endif
         </div>
         <div class="col-12 col-sm-8">
+          @if ($category!=null)
           <h1 class="text-left">{{$category->title}}</h1>
+          @endif
           <div class="row align-self-stretch">
             @foreach($categories as $elem)
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 pr-5px">
@@ -32,10 +34,13 @@
           @if(count($products)>0)
           <div>{{ $products->appends(Request::all())->links() }}</div>
           @endif
+          
+          @if ($category!=null)
           <div class="section-context pt-5">
             <h2>{{$category->context_title}}</h2>
             <div>{!!$category->context_body!!}</div>
           </div>
+          @endif
         </div>
 
       </div>
@@ -45,6 +50,7 @@
 @include('components.oneclick')
 @endsection
 
+@if ($category!=null)
 @section('title')
 {{$category->seo_title}}
 @endsection
@@ -52,3 +58,4 @@
 @section('description')
 {{$category->seo_description}}
 @endsection
+@endif

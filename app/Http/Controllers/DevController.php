@@ -13,6 +13,12 @@ use Illuminate\Support\Str;
 use Throwable;
 
 class DevController extends Controller {
+
+  public function test(){
+    $product = Product::first();
+    dd($product);
+  }
+
   public function refreshdb(Request $request) {
     return false;
     if ($request->catalog == null)

@@ -16,18 +16,16 @@
           <button class="btn-count btn-plus" @click="addCount(1)">+</button>
         </div>
         <div
-          class="button button-red d-flex align-items-center justify-content-between"
+          class="button button-red d-flex align-items-center justify-content-between count-wrap"
         >
           <div class="icon-basket"></div>
           <div @click="toBasket()">В КОРЗИНУ</div>
         </div>
-      </div>
-      <div class="d-none d-md-block col-3 manufacturer">
-        <!-- <h1>{{ product["manufacturer"] }}</h1> -->
+        <div class="button button-orange" data-toggle="modal" data-target="#oneClickModal" @click="oneClick()">КУПИТЬ В 1 КЛИК</div>
       </div>
     </div>
-    <div class="d-flex justify-content-center">
-      <div class="button button-orange" data-toggle="modal" data-target="#oneClickModal" @click="oneClick()">КУПИТЬ В 1 КЛИК</div>
+    <div class="d-flex justify-content-center align-items-center">
+      <span class="mr-2 text-red">Цена: </span><div class="button button-red" style="width:inherit" data-toggle="modal" data-target="#oneClickModal" @click="oneClick()">Получить предложение</div>
     </div>
     <div>
       <splide class="product-slider my-3" :options="sliderOptions">
@@ -129,6 +127,10 @@ h1 {
 }
 .button-red {
   background: #ce2500;
+}
+.text-red{
+  color:#ce2500;
+  font-weight: bold;
 }
 .button-red:hover {
   background: #ae2000;

@@ -52,8 +52,12 @@ Route::group(['middleware' => ['auth']], function () {
 
     
 });
+
+Route::get('/dev/sitemap', 'App\Http\Controllers\SitemapController@index')->name('sitemap.xml');
+
 Route::get('/dev/refreshdb', 'App\Http\Controllers\DevController@refreshdb')->name('dev.refreshdb');
 Route::get('/dev/setseocategories', 'App\Http\Controllers\DevController@set_seo_cat');
 Route::get('/dev/setseoproducts', 'App\Http\Controllers\DevController@set_seo_product');
+Route::get('/dev/test', 'App\Http\Controllers\DevController@test');
 
 

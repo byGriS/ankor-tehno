@@ -9112,8 +9112,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -9827,7 +9825,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\nh1[data-v-73607138] {\r\n  text-transform: uppercase;\n}\n.button[data-v-73607138] {\r\n  color: #fff;\r\n  font-size: 9pt;\r\n  padding: 5px 10px;\r\n  margin: 10px 0;\r\n  cursor: pointer;\r\n  transition: 0.3s;\r\n  min-width: 120px;\r\n  width: 120px;\n}\n.button-orange[data-v-73607138] {\r\n  background: #ff7e00;\n}\n.button-orange[data-v-73607138]:hover {\r\n  background: #dd6f00;\n}\n.button-red[data-v-73607138] {\r\n  background: #ce2500;\n}\n.button-red[data-v-73607138]:hover {\r\n  background: #ae2000;\n}\n.count-wrap[data-v-73607138] {\r\n  margin-right: 15px;\n}\n.icon-basket[data-v-73607138] {\r\n  background-image: url(\"/images/basket_icon.png\");\r\n  background-size: cover;\r\n  background-position: center, center;\r\n  width: 18px;\r\n  height: 16px;\n}\n.input-count[data-v-73607138] {\r\n  width: 100px;\r\n  margin: 10px 0;\r\n  text-align: center;\n}\n.btn-count[data-v-73607138] {\r\n  margin: 10px 0;\r\n  border: 0px;\r\n  border-top: 1px solid black;\r\n  border-bottom: 1px solid black;\r\n  outline: 0 !important;\r\n  min-width: 30px;\r\n  background: #fff;\n}\n.btn-minus[data-v-73607138] {\r\n  border-left: 1px solid black;\n}\n.btn-plus[data-v-73607138] {\r\n  border-right: 1px solid black;\n}\n.manufacturer h1[data-v-73607138] {\r\n  margin: 0;\r\n  padding: 0;\r\n  text-align: right;\n}\n.product-slider[data-v-73607138]{\r\n  height: calc(200px + 15vw);\r\n  background: #fff;\r\n  display: flex;\r\n  justify-content: center;\n}\n.splide__slide[data-v-73607138]{\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\n}\n.splide__slide img[data-v-73607138]{\r\n  max-height: 100%;\n}\n.property[data-v-73607138]{\r\n  border-bottom: 1px solid lightgrey;\r\n  padding: 4px;\n}\n.delivery[data-v-73607138]{\r\n  margin-top: 25px;\r\n  font-weight: bold;\n}\n.delivery_icon[data-v-73607138]{\r\n  background-image: url('/images/delivery.png');\r\n  padding-left: 35px;\r\n  display: block;\n}\n.delivery_icon a[data-v-73607138]{\r\n color: red;\r\n text-decoration: underline;\n}\r\n", ""]);
+exports.push([module.i, "\nh1[data-v-73607138] {\r\n  text-transform: uppercase;\n}\n.button[data-v-73607138] {\r\n  color: #fff;\r\n  font-size: 9pt;\r\n  padding: 5px 10px;\r\n  margin: 10px 0;\r\n  cursor: pointer;\r\n  transition: 0.3s;\r\n  min-width: 120px;\r\n  width: 120px;\n}\n.button-orange[data-v-73607138] {\r\n  background: #ff7e00;\n}\n.button-orange[data-v-73607138]:hover {\r\n  background: #dd6f00;\n}\n.button-red[data-v-73607138] {\r\n  background: #ce2500;\n}\n.text-red[data-v-73607138]{\r\n  color:#ce2500;\r\n  font-weight: bold;\n}\n.button-red[data-v-73607138]:hover {\r\n  background: #ae2000;\n}\n.count-wrap[data-v-73607138] {\r\n  margin-right: 15px;\n}\n.icon-basket[data-v-73607138] {\r\n  background-image: url(\"/images/basket_icon.png\");\r\n  background-size: cover;\r\n  background-position: center, center;\r\n  width: 18px;\r\n  height: 16px;\n}\n.input-count[data-v-73607138] {\r\n  width: 100px;\r\n  margin: 10px 0;\r\n  text-align: center;\n}\n.btn-count[data-v-73607138] {\r\n  margin: 10px 0;\r\n  border: 0px;\r\n  border-top: 1px solid black;\r\n  border-bottom: 1px solid black;\r\n  outline: 0 !important;\r\n  min-width: 30px;\r\n  background: #fff;\n}\n.btn-minus[data-v-73607138] {\r\n  border-left: 1px solid black;\n}\n.btn-plus[data-v-73607138] {\r\n  border-right: 1px solid black;\n}\n.manufacturer h1[data-v-73607138] {\r\n  margin: 0;\r\n  padding: 0;\r\n  text-align: right;\n}\n.product-slider[data-v-73607138]{\r\n  height: calc(200px + 15vw);\r\n  background: #fff;\r\n  display: flex;\r\n  justify-content: center;\n}\n.splide__slide[data-v-73607138]{\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\n}\n.splide__slide img[data-v-73607138]{\r\n  max-height: 100%;\n}\n.property[data-v-73607138]{\r\n  border-bottom: 1px solid lightgrey;\r\n  padding: 4px;\n}\n.delivery[data-v-73607138]{\r\n  margin-top: 25px;\r\n  font-weight: bold;\n}\n.delivery_icon[data-v-73607138]{\r\n  background-image: url('/images/delivery.png');\r\n  padding-left: 35px;\r\n  display: block;\n}\n.delivery_icon a[data-v-73607138]{\r\n color: red;\r\n text-decoration: underline;\n}\r\n", ""]);
 
 // exports
 
@@ -30080,7 +30078,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "button button-red d-flex align-items-center justify-content-between"
+                "button button-red d-flex align-items-center justify-content-between count-wrap"
             },
             [
               _c("div", { staticClass: "icon-basket" }),
@@ -30097,27 +30095,51 @@ var render = function() {
                 [_vm._v("В КОРЗИНУ")]
               )
             ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "button button-orange",
+              attrs: {
+                "data-toggle": "modal",
+                "data-target": "#oneClickModal"
+              },
+              on: {
+                click: function($event) {
+                  return _vm.oneClick()
+                }
+              }
+            },
+            [_vm._v("КУПИТЬ В 1 КЛИК")]
           )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "d-none d-md-block col-3 manufacturer" })
+        ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "d-flex justify-content-center" }, [
-        _c(
-          "div",
-          {
-            staticClass: "button button-orange",
-            attrs: { "data-toggle": "modal", "data-target": "#oneClickModal" },
-            on: {
-              click: function($event) {
-                return _vm.oneClick()
+      _c(
+        "div",
+        { staticClass: "d-flex justify-content-center align-items-center" },
+        [
+          _c("span", { staticClass: "mr-2 text-red" }, [_vm._v("Цена: ")]),
+          _c(
+            "div",
+            {
+              staticClass: "button button-red",
+              staticStyle: { width: "inherit" },
+              attrs: {
+                "data-toggle": "modal",
+                "data-target": "#oneClickModal"
+              },
+              on: {
+                click: function($event) {
+                  return _vm.oneClick()
+                }
               }
-            }
-          },
-          [_vm._v("КУПИТЬ В 1 КЛИК")]
-        )
-      ]),
+            },
+            [_vm._v("Получить предложение")]
+          )
+        ]
+      ),
       _vm._v(" "),
       _c(
         "div",
@@ -30209,10 +30231,6 @@ var render = function() {
             }
           },
           [
-            _vm.product["show_in_main"] > 0
-              ? _c("div", { staticClass: "stock_icon", class: _vm.stockClass })
-              : _vm._e(),
-            _vm._v(" "),
             _vm.product["images"] != null && _vm.product["images"].length > 0
               ? _c("img", { attrs: { src: _vm.product["images"][0]["src"] } })
               : _vm._e(),

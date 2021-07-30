@@ -18,6 +18,7 @@ class OrderController extends Controller {
     $products = [];
     array_push($products, $product->toArray());
     Mail::to("ankor-tehno@mail.ru")->send(new OrderShipped($order, $products));
+    Mail::to("sale@icmy.ru")->send(new OrderShipped($order, $products));
     return redirect()->back()->withErrors(['Заказ успешно оформлен!']);
   }
 
@@ -29,6 +30,7 @@ class OrderController extends Controller {
     $basket->payload = "";
     $basket->save();
     Mail::to("ankor-tehno@mail.ru")->send(new OrderShipped($order, $products));
+    Mail::to("sale@icmy.ru")->send(new OrderShipped($order, $products));
     return redirect('/')->withErrors(['Заказ успешно оформлен!']);
   }
 }

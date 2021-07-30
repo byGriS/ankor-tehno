@@ -2,11 +2,11 @@
   <div class="product h-100 d-flex flex-column justify-content-between">
     <div>
       <a :href="'/catalog/' + product.parentSlug + '/' + product.id">
-        <div
+        <!-- <div
           v-if="product['show_in_main'] > 0"
           class="stock_icon"
           :class="stockClass"
-        />
+        /> -->
         <img
           v-if="product['images'] != null && product['images'].length > 0"
           :src="product['images'][0]['src']"

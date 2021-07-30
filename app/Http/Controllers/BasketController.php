@@ -44,6 +44,7 @@ class BasketController extends Controller {
 
   public function upload(Request $request) {
     $path = $request->file('file')->store('public/z_files');
+    $path = str_replace('public/', '', $path);
     return $path;
   }
 }

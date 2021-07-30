@@ -23,8 +23,9 @@ class OrderShipped extends Mailable {
       return $this->from(env('MAIL_FROM_ADDRESS'))
         ->view('emails.neworder')
         ->subject('Заказ ' . $this->order->id)
-        ->with(['order' => $this->order, 'products' => $this->products])
-        ->attach(env('APP_URL') . public_path() . str_replace(public_path(), '', $this->order->requisites));
+        ->with(['order' => $this->order, 'products' => $this->products])        
+        ->attach(env('APP_URL') . $this->order->requisites);
+        //->attach(env('APP_URL') . public_path() . str_replace(public_path(), '', $this->order->requisites));
     }else{
       return $this->from(env('MAIL_FROM_ADDRESS'))
         ->view('emails.neworder')
