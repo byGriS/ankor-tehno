@@ -24,6 +24,9 @@
             </div>
             @endforeach
           </div>
+          @if (count($categories)>0 && count($products)>0)
+          <hr/>
+          @endif
           <div class="row align-self-stretch">
             @foreach ($products as $item)
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 pr-5px mb-3">

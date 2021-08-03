@@ -41,7 +41,6 @@ class ProductController extends Controller {
           });
           
         });
-        //dd($products->getBindings());
       }
       $products = $products->with('images')->with('properties')->paginate(15);
       /*****/
@@ -66,7 +65,12 @@ class ProductController extends Controller {
       $filterProperties = $productRepository->getPropertiesForFilter($filterCat->id);
       $manufacturer = $productRepository->getManufacturers($category->id);
     }
-    /* */
+
+    if(count($products) == 0){
+      $products = $productRepository->getByCategoriesIds($categories->pluck('id'));
+    }
+
+    //dd($products);
     return view('index.catalog')->with('breadcrumbs', $breadcrumbs)
       ->with('category', $category)
       ->with('categories', $categories)

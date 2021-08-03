@@ -63,4 +63,9 @@ class ProductRepository extends BaseRepository {
     $result = $this->model->whereCategoryId($cat_id)->groupBy('manufacturer')->select('manufacturer')->get();
     return $result;
   }
+
+  public function getByCategoriesIds($ids){
+    $result = $this->model->whereIn('category_id', $ids)->paginate(15);
+    return $result;
+  }
 }

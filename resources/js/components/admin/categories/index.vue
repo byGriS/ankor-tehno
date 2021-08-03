@@ -50,14 +50,8 @@
       <div class="d-flex my-1">
         <label class="col-sm-3">Контекст</label>
         <div class="col-sm-9">
-          <ckeditor
-            :editor="editor"
-            v-model="changeData.context_body"
-            :config="editorConfig"
-            tag-name="textarea"
-            :name="'context_body'"
-            @focus="selectedCategory.changed = true"
-          ></ckeditor>
+          <textarea class="form-control form-control-sm" rows="8" v-model="changeData.context_body">
+          </textarea>
         </div>
       </div>
 
@@ -67,31 +61,11 @@
 </template>
 
 <script>
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-import "@ckeditor/ckeditor5-build-classic/build/translations/ru";
 
 export default {
   props: ["categoriesInput"],
   data() {
     return {
-      editor: ClassicEditor,
-      editorConfig: {
-        language: "ru",
-        toolbar: [
-          "heading",
-          "|",
-          "bold",
-          "italic",
-          "link",
-          "bulletedList",
-          "numberedList",
-          "|",
-          "blockQuote",
-          "insertTable",
-          "undo",
-          "redo",
-        ],
-      },
       pos: 0,
       categories: [],
       selectedCategory: null,
