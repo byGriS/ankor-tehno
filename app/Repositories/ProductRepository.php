@@ -65,7 +65,7 @@ class ProductRepository extends BaseRepository {
   }
 
   public function getByCategoriesIds($ids){
-    $result = $this->model->whereIn('category_id', $ids)->paginate(15);
+    $result = $this->model->with('images')->whereIn('category_id', $ids)->paginate(15);
     return $result;
   }
 }
