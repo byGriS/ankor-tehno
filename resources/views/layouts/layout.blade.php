@@ -14,8 +14,16 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/default.css">
   <link rel="stylesheet" href="/css/nivo-slider.css">
-  <link rel="amphtml" href="https://ankor-tehno.ru/amp/{{str_replace('amp/','',Request::path())}}">
+  @php
+  $isAMP = str_contains(Request::path(), "amp/");
+  @endphp
+  @if($isAMP)
   <link rel="canonical" href="https://ankor-tehno.ru/{{str_replace('amp/','',Request::path())}}">
+  @else
+  <link rel="amphtml" href="https://ankor-tehno.ru/amp/{{str_replace('amp/','',Request::path())}}">
+  @endif
+
+
 </head>
 
 <body>
