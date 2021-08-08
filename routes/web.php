@@ -27,6 +27,7 @@ Route::get('/basket', 'App\Http\Controllers\BasketController@index');
 Route::get('/delivery', 'App\Http\Controllers\IndexController@delivery');
 
 Route::get('/catalog/{category?}/{product}', 'App\Http\Controllers\ProductController@product')->where('category','.*')->where('product','[0-9]+');
+Route::get('/amp/catalog/{category?}/{product}', 'App\Http\Controllers\ProductController@product')->where('category','.*')->where('product','[0-9]+');
 Route::get('/catalog/{category?}', 'App\Http\Controllers\ProductController@index')->where('category','.*')->name('catalog');
 
 
@@ -54,6 +55,8 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::get('/dev/sitemap', 'App\Http\Controllers\SitemapController@index')->name('sitemap.xml');
+Route::get('/price', 'App\Http\Controllers\SitemapController@turbo')->name('turbo');
+Route::get('/price/generate', 'App\Http\Controllers\SitemapController@turboGenerate')->name('turbo');
 
 Route::get('/dev/refreshdb', 'App\Http\Controllers\DevController@refreshdb')->name('dev.refreshdb');
 Route::get('/dev/setseocategories', 'App\Http\Controllers\DevController@set_seo_cat');
