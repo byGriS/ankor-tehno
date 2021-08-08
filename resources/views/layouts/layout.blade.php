@@ -19,6 +19,7 @@
   @endphp
   @if($isAMP)
   <link rel="canonical" href="https://ankor-tehno.ru/{{str_replace('amp/','',Request::path())}}">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
   @else
   <link rel="amphtml" href="https://ankor-tehno.ru/amp/{{str_replace('amp/','',Request::path())}}">
   @endif
