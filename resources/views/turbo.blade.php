@@ -1,7 +1,7 @@
 <?php
 echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
-<yml_catalog date="'{{date('Y-m-d\Th:i:s')}}'">
+<yml_catalog date="{{date('Y-m-d\Th:i:s')}}">
   <shop>
       <name>Анкор-Техно</name>
       <company>Анкор-Техно</company>

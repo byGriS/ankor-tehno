@@ -80,7 +80,7 @@ class SitemapController extends Controller {
       }
     }
     $sitemapData = '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
-    $sitemapData .= "<yml_catalog date=" . date('Y-m-d\Th:i:s') . ">" . PHP_EOL;
+    $sitemapData .= "<yml_catalog date=\"" . date('Y-m-d\Th:i:s') . "\">" . PHP_EOL;
     $sitemapData .= "<shop>" . PHP_EOL;
     $sitemapData .= "<name>Анкор-Техно</name>" . PHP_EOL;
     $sitemapData .= "<company>Анкор-Техно</company>" . PHP_EOL;
