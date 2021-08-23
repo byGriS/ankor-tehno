@@ -97,7 +97,7 @@ class SitemapController extends Controller {
     $sitemapData .= '<offers>' . PHP_EOL;
     foreach($products as $product){
       $sitemapData .= '<offer id="' . $product->id . '">'.PHP_EOL;
-      $sitemapData .= '<name>' . $product->title . '</name>'.PHP_EOL;
+      $sitemapData .= '<name>' . str_replace('&','&amp;', $product->title) . '</name>'.PHP_EOL;
       $sitemapData .= '<url>' . $product->path . '</url>'.PHP_EOL;
       $sitemapData .= '<categoryId>' . $product->category_id . '</categoryId>'.PHP_EOL;
       $sitemapData .= '</offer>'.PHP_EOL;

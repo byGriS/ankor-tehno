@@ -16,7 +16,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
       <offers>
         @foreach($products as $product)
           <offer id="{{$product->id}}">
-              <name>{{$product->title}}</name>
+              <name>{{str_replace('&','&amp;',$product->title)}}</name>
               <url>{{$product->path}}</url>
               <categoryId>{{$product->category_id}}</categoryId>
           </offer>
