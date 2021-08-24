@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-      <span class="mr-2 text-red">Цена: </span><div class="button button-red" style="width:inherit" data-toggle="modal" data-target="#oneClickModal" @click="oneClick()">Получить предложение</div>
+      <span class="mr-2 text-red price-text">Цена: </span><div class="button button-red price-block" style="width:inherit" data-toggle="modal" data-target="#oneClickModal" @click="oneClick()">Узнай свою цену</div>
     </div>
     <div>
       <splide class="product-slider my-3" :options="sliderOptions">
@@ -200,5 +200,11 @@ h1 {
 .delivery_icon a{
  color: red;
  text-decoration: underline;
+}
+.price-text{
+  font-size: 1.4rem
+}
+.price-block{
+  font-size: 1.1rem;
 }
 </style>

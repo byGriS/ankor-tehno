@@ -41,7 +41,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <p class="modal-title">ОФОРМЛЕНИЕ ЗАЯВКИ</p>
+        <p class="modal-title">Специалист отдела продаж сформирует для вас самое выгодное предложение</p>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
