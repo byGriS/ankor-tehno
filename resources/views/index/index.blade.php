@@ -8,6 +8,7 @@
       <img src="/images/header/slide3.jpg" alt="Продажа промышленного оборудованя" />
       <img src="/images/header/slide1.png" alt="Продажа промышленного оборудованя" />
       <img src="/images/header/slide2.jpg" alt="Продажа промышленного оборудованя" />
+      <img src="/images/header/slide4.jpg" alt="Продажа промышленного оборудованя" />
     </div>    
   </div>
   <div id="slide3Data" class="slider-text">
