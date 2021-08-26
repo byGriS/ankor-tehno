@@ -114,9 +114,10 @@ class DevController extends Controller {
   }
 
   public function set_seo_product(){
+    set_time_limit(-1);
     $products = Product::with('category')->get();
     foreach($products as $product){
-      $product->seo_title = $product->category->title . ': ' .$product->title . ' - купить в Самаре';
+      $product->seo_title = $product->title . ' - купить в Самаре';
       $product->seo_description = $product->title . ' - продажа в Самаре оптом и в розницу. Доступные цены. Доставка по всей России.';
       $product->save();
     }
