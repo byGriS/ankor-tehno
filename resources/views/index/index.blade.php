@@ -11,7 +11,7 @@
       <img src="/images/header/slide2.jpg" alt="Продажа промышленного оборудованя" />
     </div>    
   </div>
-  <div id="slide3Data" class="slider-text">
+  <div id="slide3Data" class="slider-text" style="display: none">
     <div class="slider-title">СКИДКИ С ПЕРВОГО ЗАКАЗА<br/>ПРИ ЗАКЛЮЧЕНИИ ДОГОВОРА</div>
     <div><a href="{{route('catalog', [], false)}}" class="btn-in-slider">В КАТАЛОГ</a></div>
   </div>
