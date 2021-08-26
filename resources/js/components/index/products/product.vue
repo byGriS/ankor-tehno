@@ -9,7 +9,7 @@
         /> -->
         <img
           v-if="product['images'] != null && product['images'].length > 0"
-          :src="product['images'][0]['src']"
+          :src="product['images'][0]['src']" :alt="product['title']"
         />
         <div class="title">{{ product["title"] }}</div>
       </a>

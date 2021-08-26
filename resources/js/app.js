@@ -15,7 +15,7 @@ $(window).on('load', function () {
       directionNav: false,
       pauseTime: 6000,
       afterChange: function() {
-        if ($('#slideshow0').data('nivo:vars').currentSlide == 0) {
+        if ($('#slideshow0').data('nivo:vars').currentSlide == 1) {
           let dataSlider = document.getElementById('slide3Data');
           dataSlider.style.display = "block";
         } else {

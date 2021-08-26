@@ -61,4 +61,8 @@
 @section('description')
 {{$category->seo_description}}
 @endsection
+
+@section('canonical')
+<link rel="canonical" href="{{Request::path()}}">
+@endsection
 @endif

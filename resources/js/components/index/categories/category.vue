@@ -9,7 +9,7 @@
           this.category.slug
         "
       >
-        <img :src="category['image']['src']" />
+        <img :src="category['image']['src']" :alt="category['title']" />
         <div class="title">{{ category["title"] }}</div>
       </a>
     </div>

@@ -9068,6 +9068,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -29810,7 +29813,12 @@ var render = function() {
           }
         },
         [
-          _c("img", { attrs: { src: _vm.category["image"]["src"] } }),
+          _c("img", {
+            attrs: {
+              src: _vm.category["image"]["src"],
+              alt: _vm.category["title"]
+            }
+          }),
           _vm._v(" "),
           _c("div", { staticClass: "title" }, [
             _vm._v(_vm._s(_vm.category["title"]))
@@ -29972,6 +29980,14 @@ var render = function() {
     [
       _c("h1", [_vm._v(_vm._s(_vm.product["title"]))]),
       _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n    В продаже " +
+            _vm._s(_vm.product["title"]) +
+            " оптом и в розницу. Предлагаем цены на 15-20% ниже рыночных! Свяжитесь с нами и убедитесь! При заказе от 3000р., доставка по Самаре - БЕСПЛАТНО! Возможна отправка товара в любую точку РФ транспортной компанией.\n  "
+        )
+      ]),
+      _vm._v(" "),
       _c("div", { staticClass: "row align-items-start" }, [
         _c("div", { staticClass: "col-3" }),
         _vm._v(" "),
@@ -30110,7 +30126,9 @@ var render = function() {
             },
             _vm._l(_vm.product["images"], function(image) {
               return _c("splide-slide", { key: image.id }, [
-                _c("img", { attrs: { src: image["src"] } })
+                _c("img", {
+                  attrs: { src: image["src"], alt: _vm.product["title"] }
+                })
               ])
             }),
             1
@@ -30190,7 +30208,12 @@ var render = function() {
           },
           [
             _vm.product["images"] != null && _vm.product["images"].length > 0
-              ? _c("img", { attrs: { src: _vm.product["images"][0]["src"] } })
+              ? _c("img", {
+                  attrs: {
+                    src: _vm.product["images"][0]["src"],
+                    alt: _vm.product["title"]
+                  }
+                })
               : _vm._e(),
             _vm._v(" "),
             _c("div", { staticClass: "title" }, [
@@ -44159,7 +44182,7 @@ $(window).on('load', function () {
       directionNav: false,
       pauseTime: 6000,
       afterChange: function afterChange() {
-        if ($('#slideshow0').data('nivo:vars').currentSlide == 0) {
+        if ($('#slideshow0').data('nivo:vars').currentSlide == 1) {
           var dataSlider = document.getElementById('slide3Data');
           dataSlider.style.display = "block";
         } else {

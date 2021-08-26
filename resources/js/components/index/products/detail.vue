@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1>{{ product["title"] }}</h1>
+    <p>
+      В продаже {{ product["title"] }} оптом и в розницу. Предлагаем цены на 15-20% ниже рыночных! Свяжитесь с нами и убедитесь! При заказе от 3000р., доставка по Самаре - БЕСПЛАТНО! Возможна отправка товара в любую точку РФ транспортной компанией.
+    </p>
     <div class="row align-items-start">
       <div class="col-3"></div>
       <div class="col-6 d-flex justify-content-center">
@@ -30,7 +33,7 @@
     <div>
       <splide class="product-slider my-3" :options="sliderOptions">
         <splide-slide v-for="image in product['images']" :key="image.id">
-          <img :src="image['src']" />
+          <img :src="image['src']" :alt="product['title']"/>
         </splide-slide>
       </splide>
     </div>
