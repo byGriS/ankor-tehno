@@ -58,7 +58,6 @@ class ProductController extends Controller {
       $categories = $categoryRepository->getAllMainWithChilds();
     }
     $categoriesSidebar = $categoryRepository->getAllMainWithChilds();
-
     /* Data for filters*/
     if (count($categories) == 0) {
       $filterCat = $categoryRepository->getById($category->id);
@@ -68,6 +67,11 @@ class ProductController extends Controller {
 
     if(count($products) == 0){
       $products = $productRepository->getByCategoriesIds($categories->pluck('id'));
+    }
+    if ($categorySlugs != null) {
+      foreach ($products as $prod) {
+        $prod->parentSlug = implode('/', $categorySlugs);
+      }
     }
 
     //dd($products);
