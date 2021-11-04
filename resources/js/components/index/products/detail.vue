@@ -29,7 +29,7 @@
     </div>
     <div class="d-flex justify-content-center align-items-center">
       <span class="mr-2 text-red price-text">Цена: </span>
-      <div v-if="product.price == ''" class="button button-red price-block" style="width:inherit" data-toggle="modal" data-target="#oneClickModal" @click="oneClick()">Узнай свою цену</div>
+      <div v-if="product.price == null" class="button button-red price-block" style="width:inherit" data-toggle="modal" data-target="#oneClickModal" @click="oneClick()">Узнай свою цену</div>
       <span v-else class="price">{{ parseInt(product.price).toLocaleString('ru-RU')}} руб.</span>
     </div>
     <div>

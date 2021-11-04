@@ -37,7 +37,7 @@
       </div>
     </div>
     <div>
-      <div class="price">{{ parseInt(product.price).toLocaleString('ru-RU') }} руб.</div>
+      <div class="price" v-if="product.price != null">{{ parseInt(product.price).toLocaleString('ru-RU') }} руб.</div>
       <div
         class="button button-orange"
         data-toggle="modal"
