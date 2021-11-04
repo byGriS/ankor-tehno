@@ -68,4 +68,18 @@ class ProductRepository extends BaseRepository {
     $result = $this->model->with('images')->whereIn('category_id', $ids)->paginate(15);
     return $result;
   }
+
+  public function getByCategoryId($id){
+    $result = $this->model->where('category_id', $id)->paginate(20);
+    return $result;
+  }
+
+  public function savePrice($data){
+    $product = $this->model->find($data['id']);
+    if($product != null){
+      $product->price = $data['price'];
+      $product->save();
+    }
+    return true;
+  }
 }

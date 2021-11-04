@@ -50,8 +50,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/admin/categories/{id}', 'App\Http\Controllers\Admin\CategoryController@store');
     Route::get('/admin/products', 'App\Http\Controllers\Admin\ProductController@index')->name('admin.products');
     Route::get('/admin/getCateoriesById', 'App\Http\Controllers\Admin\ProductController@getCateoriesById');
-
     
+    Route::get('/admin/products/{categoryId}', 'App\Http\Controllers\Admin\ProductController@getProductsByCategoryId');  
+    Route::post('/admin/products/setPrice', 'App\Http\Controllers\Admin\ProductController@setPrice');   
 });
 
 Route::get('/dev/sitemap', 'App\Http\Controllers\SitemapController@index')->name('sitemap.xml');

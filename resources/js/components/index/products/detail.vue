@@ -28,7 +28,9 @@
       </div>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-      <span class="mr-2 text-red price-text">Цена: </span><div class="button button-red price-block" style="width:inherit" data-toggle="modal" data-target="#oneClickModal" @click="oneClick()">Узнай свою цену</div>
+      <span class="mr-2 text-red price-text">Цена: </span>
+      <div v-if="product.price == ''" class="button button-red price-block" style="width:inherit" data-toggle="modal" data-target="#oneClickModal" @click="oneClick()">Узнай свою цену</div>
+      <span v-else class="price">{{ parseInt(product.price).toLocaleString('ru-RU')}} руб.</span>
     </div>
     <div>
       <splide class="product-slider my-3" :options="sliderOptions">
@@ -209,5 +211,10 @@ h1 {
 }
 .price-block{
   font-size: 1.1rem;
+}
+.price{  
+  font-size: 1.5rem;
+  color: #ce2500;
+  font-weight: bold;
 }
 </style>

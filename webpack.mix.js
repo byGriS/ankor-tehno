@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+  .sourceMaps()
   .styles(['resources/css/admin.css'], 'public/css/admin.css')
   .styles(['resources/css/index.css'], 'public/css/index.css')
   .styles(['resources/css/auth.css'], 'public/css/auth.css')

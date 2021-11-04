@@ -16,6 +16,7 @@ class CreateProductsTable extends Migration {
       $table->text('title');
       $table->text('slug')->nullable();
       $table->text('description')->nullable();
+      $table->decimal('price')->nullable();
       $table->timestamps();
       $table->foreignId('category_id')->constrained()->onDelete('cascade');
       $table->tinyInteger('show_in_main')->default(0);

@@ -9,7 +9,8 @@
         /> -->
         <img
           v-if="product['images'] != null && product['images'].length > 0"
-          :src="product['images'][0]['src']" :alt="product['title']"
+          :src="product['images'][0]['src']"
+          :alt="product['title']"
         />
         <div class="title">{{ product["title"] }}</div>
       </a>
@@ -36,6 +37,7 @@
       </div>
     </div>
     <div>
+      <div class="price">{{ parseInt(product.price).toLocaleString('ru-RU') }} руб.</div>
       <div
         class="button button-orange"
         data-toggle="modal"
@@ -58,11 +60,16 @@
         </div>
         <div class="col-6 pl-5px">
           <div
-            class="button button-red d-flex align-items-center justify-content-center"
+            class="
+              button button-red
+              d-flex
+              align-items-center
+              justify-content-center
+            "
             @click="toBasket()"
           >
             <div class="icon-basket"></div>
-            <div class="crutch57" >В КОРЗИНУ</div>
+            <div class="crutch57">В КОРЗИНУ</div>
           </div>
         </div>
       </div>
@@ -223,8 +230,13 @@ img {
 .btn-plus {
   border-right: 1px solid black;
 }
-.crutch57{
+.crutch57 {
   min-width: 57px;
   width: 57px;
+}
+.price {
+  font-size: 1.5rem;
+  color: #ce2500;
+  font-weight: bold;
 }
 </style>

@@ -39,8 +39,7 @@
 <script src='/js/app.js'></script>
 <script src='/js/jquery.nivo.slider.pack.js'></script>
 
-
-@if($errors->any())
+@if($errors->any() && $errors->messages()[0][0] != 'Данная почта незарегистрирована' && $errors->messages()[0][0] != 'Неверный пароль')
 <div class="modal fade" id="successOneClickModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

@@ -56,14 +56,20 @@
       </div>
 
       <button class="btn btn-sm btn-success" @click="save()">Сохранить</button>
+
+      <product-list :selected-category-id="selectedCategory.id"></product-list>
     </div>
   </div>
 </template>
 
 <script>
+import ProductList from '../products/list.vue'
 
 export default {
   props: ["categoriesInput"],
+  components:{
+    ProductList
+  },
   data() {
     return {
       pos: 0,

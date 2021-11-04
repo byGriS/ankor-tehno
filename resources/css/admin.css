@@ -8,6 +8,10 @@ body {
   background: rgb(245, 245, 245)!important;
 }
 
+body.waiting * {
+  cursor: progress!important;
+}
+
 header {
   height: 50px;
   background: rgb(40, 42, 51);
@@ -47,7 +51,7 @@ header a:hover {
   background: rgb(50, 47, 60);
   position: fixed;
   margin-top: 50px;
-  z-index:10;
+  z-index: 10;
 }
 
 .sidebar ul {
@@ -86,7 +90,7 @@ header a:hover {
   font-weight: bold;
 }
 
-.sidebar ul div{
+.sidebar ul div {
   color: white;
   font-weight: bold;
 }
@@ -96,7 +100,7 @@ header a:hover {
   margin-left: 200px;
 }
 
-.btn-new-claim{
+.btn-new-claim {
   font-size: 10pt;
   text-align: center;
   margin: 8px 0!important;
@@ -111,19 +115,73 @@ header a:hover {
   }
 }
 
-#app{
+#app {
   height: calc(100vh - 50px);
 }
 
-.h-100pc{
+.h-100pc {
   height: 100%;
 }
-.flex-1{
+
+.flex-1 {
   flex: 1;
 }
-.flex-2{
+
+.flex-2 {
   flex: 2;
 }
-.flex-3{
+
+.flex-3 {
   flex: 3;
+}
+
+.content-table-wrap {
+  border: 1px solid #888;
+}
+
+.content-table-wrap .content-table-header {
+  background: #555;
+  align-items: center;
+}
+
+.content-table-wrap .content-table-header div {
+  padding: 4px 10px;
+  color: #eee;
+}
+
+.content-table-body .content-table-row {
+  transition: 0.2s;
+}
+
+.content-table-body .content-table-row .row-data {
+  color: #111;
+  cursor: pointer;
+  width: 100%;
+}
+
+.content-table-body .content-table-row .row-data .cell {
+  border-left: 1px solid #888;
+  overflow: hidden;
+  padding: 0.5em;
+}
+
+.content-table-body .content-table-row:nth-child(even) {
+  background: #ddd;
+}
+.content-table-body .content-table-row:last-of-type {
+  border-bottom: 1px solid #888;
+}
+.content-table-body .content-table-row:hover {
+  background: #bbb;
+}
+
+
+@media(max-width: 768px) {
+  .content-table-wrap {
+    font-size: 0.8rem;
+  }
+  .content-table-wrap .btn {
+    font-size: 0.7rem;
+    padding: 3px;
+  }
 }
