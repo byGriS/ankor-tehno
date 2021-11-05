@@ -8,9 +8,12 @@ use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller {
-  public function index(CategoryRepository $categoryRepository) {
-    $categoriesMain = $categoryRepository->byId(null);
-    return view('admin.products')->with(compact('categoriesMain'));
+  public function index(Request $request, ProductRepository $productRepository) {
+    //$categoriesMain = $categoryRepository->byId(null);
+    //return view('admin.products')->with(compact('categoriesMain'));
+    $products = $productRepository->get($request->all());
+    $filter['old'] = $request->all();
+    return view('admin.products', compact('products', 'filter'));
   }
 
   public function getCateoriesById(Request $request, CategoryRepository $categoryRepository){

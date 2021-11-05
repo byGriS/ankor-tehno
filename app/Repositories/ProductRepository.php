@@ -82,4 +82,13 @@ class ProductRepository extends BaseRepository {
     }
     return true;
   }
+
+  public function get($filter = null){
+    $products = $this->model;
+    if(isset($filter) && isset($filter['search'])){
+      $products = $products->where('title', 'like', '%' . $filter['search'] . '%');
+    }
+    $products = $products->paginate(30);
+    return $products;
+  }
 }

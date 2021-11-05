@@ -38,6 +38,8 @@ Vue.component('branch', require('./components/admin/categories/branch.vue').defa
 
 import AdminCategoriesIndex from './components/admin/categories/index';
 import AdminProductsIndex from './components/admin/products/products_index';
+import ProductRowData from './components/admin/products/row_data'
+
 import BasketIcon from './components/index/basket/icon';
 import HeaderSlider from './components/index/header_slider.vue';
 import FooterCategoriesList from './components/index/footer_categories_list';
@@ -49,12 +51,15 @@ import SidebarCategories from './components/index/sidebar/categories'
 import SidebarFilter from './components/index/sidebar/filter'
 import BrandSlider from './components/index/brand_slider'
 
+
 const app = new Vue({
   el: '#app',
   store,
   components: {
     AdminCategoriesIndex,
     AdminProductsIndex,
+    ProductRowData,
+    
     BasketIcon,
     HeaderSlider,
     FooterCategoriesList,
